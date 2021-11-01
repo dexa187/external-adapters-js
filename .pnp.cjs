@@ -519,6 +519,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/sources/spectral-macro-score"
       },
       {
+        "name": "@chainlink/splunk-adapter",
+        "reference": "workspace:packages/sources/splunk"
+      },
+      {
         "name": "@chainlink/sportsdataio-adapter",
         "reference": "workspace:packages/sources/sportsdataio"
       },
@@ -742,6 +746,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@chainlink/set-token-index-adapter", ["workspace:packages/composites/set-token-index"]],
       ["@chainlink/sochain-adapter", ["workspace:packages/sources/sochain"]],
       ["@chainlink/spectral-macro-score-adapter", ["workspace:packages/sources/spectral-macro-score"]],
+      ["@chainlink/splunk-adapter", ["workspace:packages/sources/splunk"]],
       ["@chainlink/sportsdataio-adapter", ["workspace:packages/sources/sportsdataio"]],
       ["@chainlink/stasis-adapter", ["workspace:packages/sources/stasis"]],
       ["@chainlink/synth-index-adapter", ["workspace:packages/composites/synth-index"]],
@@ -4540,6 +4545,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@chainlink/satoshitango-adapter", "workspace:packages/sources/satoshitango"],
             ["@chainlink/sochain-adapter", "workspace:packages/sources/sochain"],
             ["@chainlink/spectral-macro-score-adapter", "workspace:packages/sources/spectral-macro-score"],
+            ["@chainlink/splunk-adapter", "workspace:packages/sources/splunk"],
             ["@chainlink/sportsdataio-adapter", "workspace:packages/sources/sportsdataio"],
             ["@chainlink/stasis-adapter", "workspace:packages/sources/stasis"],
             ["@chainlink/synthetix-debt-pool-adapter", "workspace:packages/sources/synthetix-debt-pool"],
@@ -5803,6 +5809,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ethers", "npm:5.4.6"],
             ["nock", "npm:13.1.3"],
             ["sinon", "npm:11.1.2"],
+            ["tslib", "npm:2.3.1"],
+            ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@chainlink/splunk-adapter", [
+        ["workspace:packages/sources/splunk", {
+          "packageLocation": "./packages/sources/splunk/",
+          "packageDependencies": [
+            ["@chainlink/splunk-adapter", "workspace:packages/sources/splunk"],
+            ["@chainlink/ea-bootstrap", "workspace:packages/core/bootstrap"],
+            ["@chainlink/ea-test-helpers", "workspace:packages/core/test-helpers"],
+            ["@chainlink/types", "workspace:packages/core/types/@chainlink"],
+            ["@types/jest", "npm:27.0.2"],
+            ["@types/node", "npm:14.17.21"],
+            ["splunk-sdk", "npm:1.10.0"],
             ["tslib", "npm:2.3.1"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
@@ -15297,6 +15320,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["dotenv", [
+        ["npm:10.0.0", {
+          "packageLocation": "./.yarn/cache/dotenv-npm-10.0.0-36b272df25-f412c5fe8c.zip/node_modules/dotenv/",
+          "packageDependencies": [
+            ["dotenv", "npm:10.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["drbg.js", [
         ["npm:1.0.1", {
           "packageLocation": "./.yarn/cache/drbg.js-npm-1.0.1-4fc2512327-f8df5cdd4f.zip/node_modules/drbg.js/",
@@ -15468,6 +15500,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["electron-eval", "npm:0.9.10"],
             ["get-browser-rtc", "npm:1.1.0"],
             ["hat", "npm:0.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["elementtree", [
+        ["npm:0.1.7", {
+          "packageLocation": "./.yarn/cache/elementtree-npm-0.1.7-3324be267e-f77183084f.zip/node_modules/elementtree/",
+          "packageDependencies": [
+            ["elementtree", "npm:0.1.7"],
+            ["sax", "npm:1.1.4"]
           ],
           "linkType": "HARD",
         }]
@@ -24889,6 +24931,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["needle", [
+        ["npm:2.6.0", {
+          "packageLocation": "./.yarn/cache/needle-npm-2.6.0-11708fcd8b-810d0b3cb6.zip/node_modules/needle/",
+          "packageDependencies": [
+            ["needle", "npm:2.6.0"],
+            ["debug", "virtual:2d8af823111cfc9ccca54a1c2bc8283dbe804eeb744c94d4628c46ca73a35eedca334d4a82ac7691663db96bd4604b52fcd0bcd7f82e82a5a6e64375b914995c#npm:3.2.7"],
+            ["iconv-lite", "npm:0.4.24"],
+            ["sax", "npm:1.2.4"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.9.0", {
           "packageLocation": "./.yarn/cache/needle-npm-2.9.0-9f420a9e33-d2dfe926b4.zip/node_modules/needle/",
           "packageDependencies": [
@@ -28470,6 +28522,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["sax", [
+        ["npm:1.1.4", {
+          "packageLocation": "./.yarn/cache/sax-npm-1.1.4-d8d67c74c5-85531bd8c3.zip/node_modules/sax/",
+          "packageDependencies": [
+            ["sax", "npm:1.1.4"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:1.2.4", {
           "packageLocation": "./.yarn/cache/sax-npm-1.2.4-178f05f12f-d3df7d32b8.zip/node_modules/sax/",
           "packageDependencies": [
@@ -29490,6 +29549,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["split2", "npm:3.2.2"],
             ["readable-stream", "npm:3.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["splunk-sdk", [
+        ["npm:1.10.0", {
+          "packageLocation": "./.yarn/cache/splunk-sdk-npm-1.10.0-fd2b626a9c-bb3b186603.zip/node_modules/splunk-sdk/",
+          "packageDependencies": [
+            ["splunk-sdk", "npm:1.10.0"],
+            ["cookie", "npm:0.4.1"],
+            ["dotenv", "npm:10.0.0"],
+            ["elementtree", "npm:0.1.7"],
+            ["needle", "npm:2.6.0"]
           ],
           "linkType": "HARD",
         }]

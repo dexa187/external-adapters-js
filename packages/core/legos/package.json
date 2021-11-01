@@ -121,6 +121,7 @@
     "@chainlink/satoshitango-adapter": "*",
     "@chainlink/sochain-adapter": "*",
     "@chainlink/spectral-macro-score-adapter": "*",
+    "@chainlink/splunk-adapter": "*",
     "@chainlink/sportsdataio-adapter": "*",
     "@chainlink/stasis-adapter": "*",
     "@chainlink/synthetix-debt-pool-adapter": "*",
